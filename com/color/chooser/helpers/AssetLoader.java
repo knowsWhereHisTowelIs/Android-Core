@@ -11,7 +11,10 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class AssetLoader {
 	public static Texture texture, logoTexture;
-	public static TextureRegion logo;
+	
+	public static TextureRegion logo, zbLogo, bg, grass, bird, birdDown,
+	birdUp, skullUp, skullDown, bar, playButtonUp, playButtonDown,
+	ready, gameOver, highScore, scoreboard, star, noStar, retry;
 	
 	public static void load() {
 		System.out.println("LOAD START");
@@ -23,6 +26,11 @@ public class AssetLoader {
 
 		texture = new Texture(Gdx.files.internal("data/texture.png"));
 		texture.setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
+
+		playButtonUp = new TextureRegion(texture, 0, 83, 29, 16);
+		playButtonDown = new TextureRegion(texture, 29, 83, 29, 16);
+		playButtonUp.flip(false, true);
+		playButtonDown.flip(false, true);
 		
 		System.out.println("LOAD END");
 	}

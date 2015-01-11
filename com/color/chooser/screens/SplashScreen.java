@@ -18,8 +18,9 @@ import com.color.chooser.gameworld.GameRenderer;
 import com.color.chooser.gameworld.GameWorld;
 import com.color.chooser.helpers.AssetLoader;
 import com.color.chooser.helpers.InputHandler;
+import com.color.chooser.screens.MenuScreen;
 
-public class SplashScreen implements Screen{
+public class SplashScreen implements Screen {
 	private ColorChooserGame game;
 	private SpriteBatch batcher;
 	private Sprite sprite;
@@ -61,8 +62,10 @@ public class SplashScreen implements Screen{
         batcher.draw(splashTexture, 0, 0);
         batcher.end();
         
-//        if(Gdx.input.justTouched())
-//                game.setScreen(new GameScreen());
+        if(Gdx.input.justTouched()) {
+        	System.out.println("Change Screen to menu");
+            game.setScreen( new MenuScreen(game) );
+        }
 	}
 
 	@Override

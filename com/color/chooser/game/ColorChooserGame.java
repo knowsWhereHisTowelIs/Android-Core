@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.color.chooser.helpers.AssetLoader;
+import com.color.chooser.screens.MenuScreen;
 import com.color.chooser.screens.SplashScreen;
 
 public class ColorChooserGame extends Game {

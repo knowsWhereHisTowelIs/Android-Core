@@ -1,6 +1,7 @@
 package com.color.chooser.screens;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -10,8 +11,7 @@ import com.color.chooser.gameworld.GameRenderer;
 import com.color.chooser.gameworld.GameWorld;
 import com.color.chooser.helpers.InputHandler;
 
-public class MenuScreen {
-
+public class MenuScreen implements Screen {
 	private ColorChooserGame game;
 	private SpriteBatch batcher;
 	private Sprite sprite;
@@ -41,20 +41,25 @@ public class MenuScreen {
 	@Override
 	public void show() {
 		batcher = new SpriteBatch();
-        splashTexture = new Texture(Gdx.files.internal("data/logo.png"));
+        splashTexture = new Texture(Gdx.files.internal("data/texture.png"));
 	}
 
 	@Override
 	public void render(float delta) {
 		runtime += delta;
 		
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		Gdx.gl.glClearColor(.0f, 1f, .0f, 1);
+	    Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batcher.begin();
         batcher.draw(splashTexture, 0, 0);
         batcher.end();
         
-//        if(Gdx.input.justTouched())
-//                game.setScreen(new GameScreen());
+        if(Gdx.input.justTouched()) {
+        	System.out.println("Clicked menu page");
+            //game.setScreen( new GameScreen(game) );
+        }
+        
+        world.update(delta);
 	}
 
 	@Override
@@ -86,5 +91,4 @@ public class MenuScreen {
 		// TODO Auto-generated method stub
 		
 	}
-
 }

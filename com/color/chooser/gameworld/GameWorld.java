@@ -2,6 +2,7 @@ package com.color.chooser.gameworld;
 
 import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.Rectangle;
+import com.color.chooser.includes.GameState;
 
 public class GameWorld {
 	private Rectangle ground;
@@ -9,12 +10,8 @@ public class GameWorld {
 	private float runTime = 0;
 	private int midPointY;
 	private GameRenderer renderer;
-	
-	private GameState currentState;
 
-	public enum GameState {
-		MENU, READY, RUNNING, GAMEOVER, HIGHSCORE
-	}
+	private GameState currentState;
 
 	public GameWorld(int midPointY) {
 		currentState = GameState.MENU;
@@ -30,7 +27,6 @@ public class GameWorld {
 		case MENU:
 			updateReady(delta);
 			break;
-
 		case RUNNING:
 			updateRunning(delta);
 			break;
@@ -41,6 +37,7 @@ public class GameWorld {
 	}
 
 	private void updateReady(float delta) {
+
 	}
 
 	public void updateRunning(float delta) {
@@ -48,7 +45,7 @@ public class GameWorld {
 			delta = .15f;
 		}
 	}
-	
+
 	public int getMidPointY() {
 		return midPointY;
 	}
