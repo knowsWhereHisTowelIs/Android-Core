@@ -9,6 +9,7 @@ import com.color.chooser.game.ColorChooserGame;
 import com.color.chooser.gameworld.GameRenderer;
 import com.color.chooser.gameworld.GameWorld;
 import com.color.chooser.helpers.InputHandler;
+import com.color.chooser.gameobjects.*;
 
 public class MenuScreen {
 
@@ -38,13 +39,11 @@ public class MenuScreen {
 		world.setRenderer(renderer);
 	}
 
-	@Override
 	public void show() {
 		batcher = new SpriteBatch();
         splashTexture = new Texture(Gdx.files.internal("data/logo.png"));
 	}
 
-	@Override
 	public void render(float delta) {
 		runtime += delta;
 		
@@ -57,31 +56,26 @@ public class MenuScreen {
 //                game.setScreen(new GameScreen());
 	}
 
-	@Override
 	public void resize(int width, int height) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void pause() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void resume() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void hide() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void dispose() {
 		// TODO Auto-generated method stub
 		
