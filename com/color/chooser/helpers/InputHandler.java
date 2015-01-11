@@ -34,8 +34,9 @@ public class InputHandler implements InputProcessor {
 
 	@Override
 	public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-		screenX = scaleX(screenX);
-		screenY = scaleY(screenY);
+		if(myWorld.getButton().isClicked(screenX, screenY)) {
+			System.out.println("SHITHEAD!");
+		}
 		
 		return true;
 	}
