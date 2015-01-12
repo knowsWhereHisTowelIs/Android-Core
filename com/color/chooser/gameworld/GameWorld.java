@@ -1,13 +1,15 @@
 package com.color.chooser.gameworld;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.Rectangle;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import com.color.chooser.includes.GameState;
 =======
 import com.color.chooser.gameobjects.Button;
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 1db16fc... Added sgtuffs
 
 public class GameWorld {
 	private Rectangle ground;
@@ -16,8 +18,11 @@ public class GameWorld {
 	private int midPointY;
 	private GameRenderer renderer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	private Button button;
+=======
+>>>>>>> parent of 1db16fc... Added sgtuffs
 	
 	private GameState currentState;
 >>>>>>> origin/master
@@ -28,7 +33,6 @@ public class GameWorld {
 		currentState = GameState.MENU;
 		this.midPointY = midPointY;
 		ground = new Rectangle(0, midPointY + 66, 137, 11);
-		button = new Button(0,0,Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 	}
 
 	public void update(float delta) {
@@ -106,10 +110,6 @@ public class GameWorld {
 
 	public void setRenderer(GameRenderer renderer) {
 		this.renderer = renderer;
-	}
-	
-	public Button getButton() {
-		return button;
 	}
 
 }
